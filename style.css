@@ -1,0 +1,517 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+html {
+	scroll-behavior: smooth;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	width: 100vw;
+	font-size: 15pt;
+	font-family: 'Montserrat', sans-serif;
+	background-color: #eee;
+	position: relative;
+}
+
+a {
+	-webkit-tap-highlight-color: transparent;
+	text-decoration: none;
+	color: white;
+}
+
+i {
+	color: white;
+	font-size: 25px;
+	transform: rotate(-90deg);
+}
+.navcon{
+	margin: auto;
+	width: 100vw;
+	max-width: 1200px;
+	display: flex;
+	justify-content: center;
+	align-items: flex-start;
+	flex-direction: column;
+}
+.container {
+	padding: 15px;
+	margin: auto;
+	width: 100vw;
+	max-width: 1200px;
+	display: flex;
+	justify-content: center;
+	align-items: flex-start;
+	flex-direction: column;
+}
+
+.mb {
+	margin-bottom: 10px;
+}
+
+.gridcards {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+}
+
+.modal {
+	background-color: white;
+	width: 100%;
+	max-width: 600px;
+	z-index: 200;
+	padding: 10px;
+	border-radius: 2px;
+}
+
+.cardModal {
+	background-color: #00000060;
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	width: 100%;
+	padding: 10px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	z-index: 200
+}
+
+.btn {
+	border: none;
+	background-color: #eee;
+	border: 1px solid #444444;
+	padding: 8px 20px;
+}
+
+.mbtn {
+	width: 100%;
+	padding: 10px 20px;
+	font-family: 'Montserrat', sans-serif;
+}
+
+.btn a {
+	color: #444444;
+	font-family: 'Montserrat', sans-serif;
+	font-weight: 500;
+}
+
+.title1 {
+	font-weight: 900;
+	color: #444444;
+	font-size: 25px;
+}
+
+.title2 {
+	font-weight: 600;
+	color: #444444;
+	font-size: 20px;
+
+}
+
+.para1 {
+	color: #444444;
+	margin: 10px 0;
+	font-size: 16px;
+	font-weight: 500;
+	line-height: 1.6rem;
+}
+
+.para2 {
+	font-size: 14px;
+	margin: 5px 0;
+	font-style: italic;
+	opacity: 70%;
+	line-height: 1.6rem;
+}
+
+/* end of utilities */
+
+nav {
+	background-color: black;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 15px 15px;
+	position: fixed;
+	width: 100vw;
+	z-index: 300;
+}
+
+.compnav {
+	display: block;
+	display: flex;
+	justify-content: flex-end;
+	align-items: center;
+	list-style: none;
+	position: absolute;
+	right: 16%;
+	top: 35%;
+}
+
+.compnav li {
+	margin: 0 10px;
+	font-size: 14px;
+}
+
+.dev a {
+	border: 1px solid white;
+	color: black;
+	background-color: white;
+	padding: 0 5px;
+	border-radius: 2px;
+}
+
+nav .logo {
+	width: 120px;
+	/* background: url(https://en.wikipedia.org/wiki/SpaceX#/media/File:SpaceX_logo_black.svg) no-repeat top left; */
+	fill: white;
+}
+
+nav .logo img {
+	width: 100%;
+}
+
+.sidebar ul {
+	list-style: none;
+	background-color: black;
+	position: absolute;
+	left: -70%;
+	width: 70vw;
+	height: 100vh;
+	padding: 15px;
+	padding-top: 70px;
+	transition: .8s all ease;
+	position: fixed;
+	z-index: 99;
+}
+
+.sidebar ul li {
+	margin-bottom: 20px;
+	font-size: 18px;
+	font-weight: 400;
+}
+
+nav .bar button {
+	border: none;
+	background-color: transparent;
+	outline: none;
+	display: flex;
+	justify-content: flex-end;
+	align-items: flex-start;
+	flex-direction: column;
+	padding: 15px 0 15px 15px;
+	display: none;
+	padding-top: 5px;
+}
+
+nav .bar button .up {
+	background-color: white;
+	height: 2px;
+	width: 10px;
+	margin-bottom: 2px;
+}
+
+nav .bar button .down {
+	background-color: white;
+	height: 2px;
+	width: 5px;
+	margin-bottom: 2px;
+}
+
+/*hero*/
+
+.hero {
+	height: 100vh;
+
+}
+
+.hero .img {
+	width: 100vw;
+	height: 40vh;
+}
+
+.hero .img img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+
+.hero .herotxt {
+	align-items: flex-start;
+}
+
+.cards {
+	margin-top: 10px;
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+	grid-gap: 30px;
+}
+
+.history .cards .card {
+	border-top: 1px solid rgb(212, 212, 212);
+	display: flex;
+	justify-content: space-between;
+	align-items: flex-start;
+	padding: 10px 10px 10px 0;
+}
+
+.history .cards .card .date {
+	font-size: 14px;
+	opacity: 50%;
+	margin-bottom: 3px;
+}
+
+.history .cards .card .para1 {
+	margin: 5px 0;
+}
+
+.history .cards .card .img img {
+	width: 80px;
+	height: 80px;
+	object-fit: cover;
+}
+
+.himg {
+	width: 80px;
+	height: 80px;
+	object-fit: cover;
+	margin-left: 5px
+}
+
+
+/* end of history */
+.mission .img {
+	width: 100%;
+	margin: 10px 0;
+}
+
+.mission .img img {
+	height: 120px;
+	width: 100%;
+	object-fit: cover;
+}
+
+.mimg {
+	height: 120px;
+	width: 100%;
+	object-fit: cover;
+}
+
+.mission .para1 {
+	margin-bottom: 0;
+}
+
+.mission .mcard .card {
+	margin-top: 20px;
+	border-top: 1px solid gray;
+}
+
+/* end of mission */
+
+.rocket .img {
+	width: 100%;
+	margin: 10px 0;
+}
+
+.rocket .img img {
+	height: 120px;
+	width: 100%;
+	object-fit: cover;
+}
+
+.rocket .para1 {
+	margin-bottom: 0;
+}
+
+.rocket .mcard .card {
+	margin-top: 20px;
+	border-top: 1px solid gray;
+}
+
+.rocketInfo {
+	background-color: #00000060;
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	transition: all 0.1s ease-in;
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.rocketInfo .infos {
+	border-top: 1px solid gray;
+	width: 100%;
+	padding: 5px;
+}
+
+.rocketInfo .infos .row {
+	font-size: 16px;
+	margin: 5px 0;
+	padding: 5px 0;
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	background-color: #f9f9f9;
+}
+
+/* end of rockets */
+.launch .img {
+	width: 100%;
+	margin: 10px 0;
+}
+
+.launch .img img {
+	height: 150px;
+	width: 100%;
+	object-fit: cover;
+}
+
+.launch .lcard .card {
+	border-top: 1px solid gray;
+	padding: 10px 0;
+}
+
+.lp {
+	margin: 0;
+}
+
+.launch .lcard .card h2 {
+	font-weight: 500;
+	font-size: 18px;
+	margin: 10px 0;
+	line-height: 1.8rem;
+}
+
+.about .img {
+	width: 100%;
+	position: relative;
+	margin-top: 10px;
+	margin-bottom: 60px;
+}
+
+.about .img img {
+	width: 100%;
+	height: 120px;
+	object-fit: cover;
+}
+
+.about .img .cover {
+	height: 200px;
+	background: url('https://www.aljazeera.com/wp-content/uploads/2021/09/AP21259065226093.jpg?resize=1170%2C780');
+	background-position:0 0;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+.about .img .prof {
+	height: 200px;
+	width: 200px;
+	border-radius: 50%;
+	position: absolute;
+	left: 10%;
+	top: 90px;
+	border: 3px solid #eee;
+}
+
+.about .txt {
+	margin-top: 20px;
+}
+.about .txt .para1 {
+	margin: 0;
+	font-size: 15px;
+}
+
+.about .txt .para2 {
+	margin-top: 10px;
+}
+
+.about .txt .title2 {
+	font-size: 16px;
+}
+
+.about .txt button a {
+	color: #444444;
+	font-family: 'Montserrat', sans-serif;
+}
+
+footer {
+	background-color: #212121;
+}
+
+footer .container .cop {
+	color: #eee;
+	font-size: 14px;
+	font-weight: 400;
+	margin-bottom: 20px;
+}
+
+footer .container .lin {
+	color: #eee;
+	font-size: 15px;
+	font-weight: 500;
+	margin-bottom: 10px;
+}
+
+footer .para1 {
+	margin: 2px;
+	font-size: 14px;
+	font-weight: 400;
+
+}
+
+.done {
+	padding: 15px;
+	font-size: 13px;
+	color: gray;
+}
+
+b {
+	color: gray
+}
+
+
+@media only screen and (max-width: 840px) {
+	nav .bar button {
+		display: block;
+	}
+	.navcon{
+		margin: auto;
+	width: 100vw;
+	max-width: 1200px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	flex-direction: row;
+	}
+	.compnav {
+		display: none;
+	}
+	.about .img .cover {
+		height: 100px;
+		background: url('https://www.aljazeera.com/wp-content/uploads/2021/09/AP21259065226093.jpg?resize=1170%2C780');
+		background-position:0 0;
+		background-repeat: no-repeat;
+		background-size: cover;
+	}
+	
+	.about .img .prof {
+		height: 100px;
+		width: 100px;
+		border-radius: 50%;
+		position: absolute;
+		left: 10%;
+		top: 50px;
+		border: 3px solid #eee;
+	}
+}
